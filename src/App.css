@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+.background-image {
+  background-image: url("./assets/Frame\ 416.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  animation: moveRight 10s linear infinite;
+  /* margin: 20px */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+body {
+  margin: 0%;
+  padding: 0%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes moveRight {
+
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  20% {
+    background-position: 10rem 0;
+    /* Adjust the value for the desired movement */
+  }
+
+  80% {
+    background-position: 10rem 0;
+    /* Keep it at this position for a while */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.h1Img {
+  padding: 3px;
+  position: absolute;
+  left: 26%;
+  /* right: 3; */
+  border-radius: 50px;
+  bottom: 48%;
+}
+
+h1 {
+  letter-spacing: 5px;
+}
+
+.right_footer {
+  /* position: relative; */
+  /* Add this line */
+  overflow: hidden;
+  width: 100px;
+  /* Set a specific width */
+  height: 100px;
+  /* Set a specific height */
+}
+
+.img5 {
+  position: absolute;
+  bottom: -100px;
+  right: 0;
+}
+
+
+
+.phone-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  /* float: right; */
+  position: absolute;
+  right: 20%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  top: -15%;
 }
 
-.App-link {
-  color: #61dafb;
+.phone {
+  width: 100px;
+  height: 200px;
+  margin: 0 10px;
+  /* Adjust margin for spacing */
+  transition: all 0.3s;
+  /* Add a smooth transition for scaling and margin */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.middle-phone {
+  transform: scale(1.2);
+  /* Increase the size of the middle phone */
+  transform-origin: center bottom;
+
+  /* Keep the base the same while scaling */
+  margin: 0 10px;
+  margin-bottom: 3rem;
+  padding-right: 3rem;
+  /* Adjust the margin for the middle phone */
+}
+
+
+.top-left-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  /* flex-direction: column; */
+}
+
+.box1 {
+  width: 40px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: #FF6262;
+}
+
+.box2 {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 5px;
+  background-color: #FF6262;
+
 }
